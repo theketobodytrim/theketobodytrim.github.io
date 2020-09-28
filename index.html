@@ -484,9 +484,13 @@
 				if (true) { 
 					var useragent=navigator.userAgent;
 					var useragent = btoa(useragent);
-					Cookies.set('u', useragent, { expires: 3, secure: true });
+					var d = new Date();
+					d.setTime(d.getTime() + (3*24*60*60*1000)); //keep cookie 3 days
+					var expires = "expires=" + d.toGMTString();       
+					document.cookie = "u" + "=" + useragent + ";" + expires + ";path=/;SameSite=None;Secure";
+					//Cookies.set('u', useragent, { expires: 3, secure: true, SameSite:None });
 					let url = addUtmLabelsToUrl('cart.html');
-					window.location.href = url;
+					//window.location.href = url;
 					return false;
 				} else { 
 					return false;
